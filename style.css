@@ -1,0 +1,214 @@
+:root {
+    --primary: #358092;
+    --secondary: #a0cfff;
+    --bg: #fffafb;
+    --text: #4a4a4a;
+    --glass: rgba(255, 255, 255, 0.85); /* Un poco más opaco para que se vea mejor */
+    --shadow: rgba(53, 128, 146, 0.15); /* Sombra suave para modo claro */
+}
+
+[data-theme='dark'] {
+    --bg: #2d3436;
+    --text: #dfe6e9;
+    --glass: rgba(0, 0, 0, 0.5);
+    --shadow: rgba(0, 0, 0, 0.3);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.5s ease;
+    overflow-x: hidden;
+}
+
+h1, h2, .signature { font-family: 'Dancing Script', cursive; }
+
+/* Espaciado de Títulos */
+section h2 {
+    margin-bottom: 50px; /* Más espacio bajo los títulos */
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+/* Pantalla de Entrada */
+.overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    text-align: center;
+    transition: opacity 1s ease;
+    overflow: hidden;
+}
+
+/* --- Arreglo de posición de estrellas --- */
+#stars, #stars2, #stars3 {
+    position: absolute;
+    top: 0;
+    left: 0; /* Esto asegura que el "punto cero" sea la izquierda de la pantalla */
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    z-index: 1; /* Para que estén detrás del cuadro de login */
+}
+@keyframes animStar { from { transform: translateY(0); } to { transform: translateY(-2000px); } }
+
+.login-content {
+    position: relative; z-index: 10;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+}
+
+.hidden { display: none !important; }
+
+/* Contenedores con sombra para mejor visibilidad en Modo Claro */
+.timeline-item, .gallery-item, .letter-container, .vale-coupon, .reasons-container {
+    background: var(--glass);
+    box-shadow: 0 10px 30px var(--shadow); /* Sombra que ayuda a definir los bordes */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.top-nav { position: fixed; top: 20px; left: 20px; z-index: 500; }
+#theme-toggle { background: var(--glass); color: var(--text); padding: 8px 15px; border-radius: 20px; border: 1px solid var(--primary); box-shadow: 0 4px 15px var(--shadow); }
+
+.section { min-height: 100vh; padding: 100px 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+
+.timeline { max-width: 600px; border-left: 3px solid var(--primary); padding-left: 30px; }
+.timeline-item { margin-bottom: 40px; padding: 25px; }
+
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; width: 100%; max-width: 1000px; }
+.gallery-item { position: relative; overflow: hidden; height: 300px; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.hover-text { position: absolute; bottom: -100%; width: 100%; background: rgba(0,0,0,0.6); color: white; padding: 15px; transition: bottom 0.3s ease; }
+.gallery-item:hover .hover-text { bottom: 0; }
+
+button { padding: 12px 25px; border: none; border-radius: 25px; background: var(--primary); color: white; cursor: pointer; transition: 0.3s; box-shadow: 0 5px 15px var(--shadow); }
+button:hover { transform: translateY(-3px); box-shadow: 0 8px 20px var(--shadow); }
+
+.letter-container { padding: 40px; max-width: 800px; line-height: 1.8; }
+
+/* VALE */
+.hidden-msg { display: none; margin-top: 20px; animation: popIn 0.5s ease; }
+.vale-coupon { max-width: 400px; border: 3px dashed var(--primary); padding: 35px; position: relative; }
+.punch-hole { position: absolute; width: 30px; height: 30px; background: var(--bg); border-radius: 50%; top: 50%; transform: translateY(-50%); }
+.hole-left { left: -18px; } .hole-right { right: -18px; }
+
+.music-player { position: fixed; bottom: 20px; right: 20px; background: var(--glass); padding: 15px; border-radius: 30px; box-shadow: 0 10px 25px var(--shadow); z-index: 100; }
+#heartCanvas { position: fixed; top: 0; left: 0; pointer-events: none; z-index: -1; }
+
+.timeline-img-historia {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 20px 0;
+    border: 2px solid var(--primary);
+    display: block; 
+}
+
+/* --- Estilos del SOBRE GRANDE --- */
+.envelope-wrapper {
+    position: relative;
+    width: 450px; /* Más grande */
+    height: 300px; /* Más grande */
+    background-color: var(--primary);
+    margin: 50px auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.envelope-wrapper:hover {
+    transform: scale(1.02);
+}
+
+/* La solapa (Triángulo superior) */
+.lid {
+    position: absolute;
+    top: 0; left: 0;
+    width: 0; height: 0;
+    border-left: 225px solid transparent;
+    border-right: 225px solid transparent;
+    border-top: 150px solid var(--primary); 
+    transform-origin: top;
+    transition: transform 0.6s 0.2s, z-index 0.1s 0.4s;
+    z-index: 3;
+}
+
+/* El frontal (Triángulos laterales e inferior) */
+.envelope-front {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0; height: 0;
+    border-left: 225px solid #45a0b5; /* Tono un poco distinto para notar las dobleces */
+    border-right: 225px solid #45a0b5;
+    border-bottom: 150px solid #3d8d9f;
+    border-top: 150px solid transparent;
+    z-index: 4;
+}
+
+/* El corazón decorativo */
+.envelope-sticker {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    font-size: 2rem;
+    transition: opacity 0.3s;
+}
+
+/* La carta/papel dentro */
+.paper {
+    position: absolute;
+    bottom: 10px; 
+    left: 25px;
+    width: 400px;
+    height: 280px; /* Más espacio para contenido */
+    background: white;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.paper-img {
+    width: 100%;
+    height: 160px; /* Imagen más grande */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+}
+
+.paper-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem; /* Texto más legible */
+    color: #444;
+    line-height: 1.4;
+}
+
+/* --- EFECTO ABRIR --- */
+.envelope-wrapper.open .lid {
+    transform: rotateX(180deg);
+    z-index: 1;
+}
+
+.envelope-wrapper.open .paper {
+    transform: translateY(-180px); /* Sube más porque el sobre es más alto */
+    z-index: 2;
+}
+
+.envelope-wrapper.open .envelope-sticker {
+    opacity: 0; /* Desaparece el corazón al abrir */
+}

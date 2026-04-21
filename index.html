@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi príncipe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="login-screen" class="overlay">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        
+        <div class="login-content">
+            <h1>Para Tobio</h1>
+            <p>Realmente es una tontería, pero quería hacerte algo</p>
+            <input type="password" id="passwordInput" placeholder="Nuestro número...">
+            <button onclick="checkPassword()">Entrar</button>
+        </div>
+    </div>
+
+    <main id="main-content" class="hidden">
+        <nav class="top-nav">
+            <button id="theme-toggle">🌓 Modo</button>
+        </nav>
+
+        <section id="historia" class="section">
+            <h2 data-aos="fade-up">El comienzo de nuestra historia</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <h3>El primer día</h3>
+                        <span class="date">22 de febrero, 2026</span>
+                        <img src="primero.jpeg" alt="Nuestro primer día" class="timeline-img-historia">
+                        <p> Y así empezó nuestra historia<br>(gracias por echar al hinata, jeje)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria" class="section">
+            <h2 data-aos="fade-up">Recuerdos lindos</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="zoom-in">
+                    <img src="piedrapapel.jpg" alt="Recuerdo 1">
+                    <div class="hover-text">Donde empezó nuestra competitividad</div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="motos.jpg" alt="Recuerdo 2">
+                    <div class="hover-text">Nuestra primera cita</div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="amor.jpg" alt="Recuerdo 3">
+                    <div class="hover-text">El primer "amor"</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="carta" class="section">
+            <div class="letter-container" data-aos="fade-in">
+                <h2>Mi carta para ti</h2>
+                <p id="typing-text"></p>
+            </div>
+        </section>
+
+        <section id="razones" class="section">
+            <h2 data-aos="fade-up">Razones por las que te amo</h2>
+            <div class="reasons-container">
+                <button class="reason-btn" onclick="showReason('Tu sonrisa ilumina mi peor día.')">Razón #1</button>
+                <button class="reason-btn" onclick="showReason('Tu forma de ver la vida me inspira.')">Razón #2</button>
+                <button class="reason-btn" onclick="showReason('Haces que cada momento sea especial.')">Razón #3</button>
+                <p id="reason-display"></p>
+            </div>
+        </section>
+
+    <section id="sobre-seccion" class="section">
+    <h2 data-aos="fade-up">Un mensaje guardado</h2>
+    <div class="envelope-wrapper" onclick="openEnvelope()" data-aos="zoom-in">
+        <div class="envelope">
+            <div class="lid"></div>
+            <div class="paper">
+                <img src="pixelart.jpg" alt="Foto especial" class="paper-img">
+                <p class="paper-text">"Eres el 'sí' a todas mis dudas y el 'siempre' en mi vida. Te quiero infinito." ❤️</p>
+            </div>
+        </div>
+        <div class="envelope-front"></div>
+        <div class="envelope-sticker">★</div>
+    </div>
+    <p class="envelope-hint">Toca el sobre para abrirlo ✨</p>
+</section>
+
+        <section id="sorpresa" class="section">
+            <button class="surprise-btn" id="btn-surprise">No pulses 😏</button>
+            <div id="surprise-msg" class="hidden-msg">
+                <div class="vale-coupon">
+                    <div class="vale-header">
+                        <span class="vale-title">VALE ESPECIAL</span>
+                        <span class="vale-number">№ 0001</span>
+                    </div>
+                    <div class="vale-body">
+                        <h3>¡Te debo un beso gigante y una cena! 🍕</h3>
+                        <p class="vale-description">Este vale es personal, intransferible y lleno de amor.</p>
+                    </div>
+                    <div class="vale-footer">
+                        <p>Válido para canjear hoy mismo.</p>
+                        <p class="vale-signature">Firma: Shou ❤️</p>
+                    </div>
+                    <div class="punch-hole hole-left"></div>
+                    <div class="punch-hole hole-right"></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="music-player">
+            <p>Nuestra canción 🎵</p>
+            <audio id="miCancion" controls>
+                <source src="adoreyou.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <footer class="section">
+            <h2 data-aos="fade-up">Gracias por todo</h2>
+            <p class="signature">Con amor, Shou</p>
+        </footer>
+    </main>
+
+    <canvas id="heartCanvas"></canvas>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
