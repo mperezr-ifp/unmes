@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para mi príncipe</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -34,40 +34,48 @@
                 <div id="timer">
                     <div class="time-block"><span id="days">00</span><p>Días</p></div>
                     <div class="time-block"><span id="hours">00</span><p>Horas</p></div>
-                    <div class="time-block"><span id="minutes">00</span><p>Min</p></div>
-                    <div class="time-block"><span id="seconds">00</span><p>Seg</p></div>
+                    <div class="time-block"><span id="minutes">00</span><p>Minutos</p></div>
+                    <div class="time-block"><span id="seconds">00</span><p>Segundos</p></div>
                 </div>
             </div>
         </section>
 
         <section id="historia" class="section">
-            <h2 data-aos="fade-up">Nuestra historia</h2>
+            <h2 data-aos="fade-up">El comienzo de nuestra historia</h2>
             <div class="timeline">
                 <div class="timeline-item" data-aos="fade-right">
                     <div class="timeline-content">
                         <h3>El primer día</h3>
                         <span class="date">22 de febrero, 2026</span>
                         <img src="primero.jpeg" alt="Nuestro primer día" class="timeline-img-historia">
-                        <p>Y así empezó todo...<br>(gracias por echar al hinata, jeje)</p>
+                        <p> Y así empezó nuestra historia<br>(gracias por echar al hinata, jeje)</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="galeria" class="section">
-            <h2 data-aos="fade-up">Recuerdos</h2>
+            <h2 data-aos="fade-up">Recuerdos lindos</h2>
             <div class="gallery-grid">
                 <div class="gallery-item" data-aos="zoom-in">
-                    <img src="piedrapapel.jpg" alt="1">
-                    <div class="hover-text">Nuestra competitividad</div>
+                    <img src="piedrapapel.jpg" alt="Recuerdo 1">
+                    <div class="hover-text">Donde empezó nuestra competitividad</div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="motos.jpg" alt="Recuerdo 2">
+                    <div class="hover-text">Nuestra primera cita</div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="amor.jpg" alt="Recuerdo 3">
+                    <div class="hover-text">El primer "amor"</div>
                 </div>
                 <div class="gallery-item" data-aos="zoom-in">
-                    <img src="motos.jpg" alt="2">
-                    <div class="hover-text">Primera cita</div>
+                    <img src="enamorado.jpg" alt="Recuerdo 4">
+                    <div class="hover-text">Cuando dijiste que estabas enamorado de mí</div>
                 </div>
-                <div class="gallery-item" data-aos="zoom-in">
-                    <img src="amor.jpg" alt="3">
-                    <div class="hover-text">El primer amor</div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="oportunidad.jpg" alt="Recuerdo 5">
+                    <div class="hover-text">Cuando me diste una oportunidad confusa!!</div>
                 </div>
             </div>
         </section>
@@ -80,43 +88,111 @@
         </section>
 
         <section id="razones" class="section">
-            <h2 data-aos="fade-up">Por qué te amo</h2>
-            <div class="reasons-container">
-                <div class="reasons-buttons">
-                    <button class="reason-btn" onclick="showReason('Tu sonrisa ilumina mi peor día.')">#1</button>
-                    <button class="reason-btn" onclick="showReason('Tu forma de ver la vida.')">#2</button>
-                    <button class="reason-btn" onclick="showReason('Haces todo especial.')">#3</button>
-                    <button class="reason-btn" onclick="showReason('Tu paciencia.')">#4</button>
-                    <button class="reason-btn" onclick="showReason('Cómo me cuidas.')">#5</button>
-                    <button class="reason-btn" onclick="showReason('Eres mi mejor amigo.')">#6</button>
+    <h2 data-aos="fade-up">Algunas razones de por qué te amo</h2>
+    <div class="reasons-grid">
+        <div class="reason-card" data-aos="zoom-in" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <span class="heart-icon">☆</span>
+                    <p>Razón #1</p>
                 </div>
-                <p id="reason-display"></p>
+                <div class="card-back">
+                    <p>Siempre sabes qué decirme cuando estoy mal.</p>
+                </div>
             </div>
-        </section>
+        </div>
+        <div class="reason-card" data-aos="zoom-in" data-aos-delay="100" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <span class="heart-icon">✦</span>
+                    <p>Razón #2</p>
+                </div>
+                <div class="card-back">
+                    <p>Amo lo inteligente que eres y amo escucharte filosofar.</p>
+                </div>
+            </div>
+        </div>
+        <div class="reason-card" data-aos="zoom-in" data-aos-delay="200" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <span class="heart-icon">✯</span>
+                    <p>Razón #3</p>
+                </div>
+                <div class="card-back">
+                    <p>Adoro que tengamos pensamientos similares, y que demostremos el amor igual.</p>
+                </div>
+            </div>
+        </div>
+        <div class="reason-card" data-aos="zoom-in" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <span class="heart-icon">❤</span>
+                    <p>Razón #4</p>
+                </div>
+                <div class="card-back">
+                    <p>Tu paciencia infinita conmigo.</p>
+                </div>
+            </div>
+        </div>
+        <div class="reason-card" data-aos="zoom-in" data-aos-delay="100" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <span class="heart-icon">♡</span>
+                    <p>Razón #5</p>
+                </div>
+                <div class="card-back">
+                    <p>Amo lo atento que eres con todo el mundo.</p>
+                </div>
+            </div>
+        </div>
+        <div class="reason-card" data-aos="zoom-in" data-aos-delay="200" onclick="this.classList.toggle('flipped')">
+            <div class="card-inner">
+                <div class="card-front">
+                    <span class="heart-icon">✪</span>
+                    <p>Razón #6</p>
+                </div>
+                <div class="card-back">
+                    <p>Eres mi mejor amigo y mi gran amor.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="sobre-seccion" class="section">
             <h2 data-aos="fade-up">Un regalito</h2>
             <div class="envelope-wrapper" onclick="openEnvelope()" data-aos="zoom-in">
                 <div class="lid"></div>
-                <div class="envelope-body">
+                <div class="envelope">
                     <div class="paper">
-                        <img src="pixelart.jpg" alt="Foto" class="paper-img">
-                        <p class="paper-text">"Él aquí luce como estrella..."</p>
+                        <img src="pixelart.jpg" alt="Foto especial" class="paper-img">
+                        <p class="paper-text">"Él aquí luce como estrella<br>Él aquí, todo es claridad"</p>
                     </div>
                 </div>
                 <div class="envelope-front"></div>
                 <div class="envelope-sticker">★</div>
             </div>
-            <p class="envelope-hint">Toca el sobre jeje</p>
+            <p class="envelope-hint">Toca el sobre para abrirlo jeje</p>
         </section>
 
         <section id="sorpresa" class="section">
-            <button class="surprise-btn" id="btn-surprise">¡PÚLSAME! 😏</button>
+            <button class="surprise-btn" id="btn-surprise">No pulsar!! (hazlo)</button>
             <div id="surprise-msg" class="hidden-msg">
                 <div class="vale-coupon">
-                    <h3>VALE ESPECIAL № 0001</h3>
-                    <p>¡Te debo un beso enorme y una cena!</p>
-                    <p class="vale-signature">Firma: Shou ❤️</p>
+                    <div class="vale-header">
+                        <span class="vale-title">VALE ESPECIAL</span>
+                        <span class="vale-number">№ 0001</span>
+                    </div>
+                    <div class="vale-body">
+                        <h3>¡Te debo un beso enorme y una cena (casera)!</h3>
+                        <p class="vale-description">Este vale es personal e intransferible.</p>
+                    </div>
+                    <div class="vale-footer">
+                        <p>Válido para canjear cuando quieras.</p>
+                        <p class="vale-signature">Firma: Hinata Shoyo</p>
+                    </div>
+                    <div class="punch-hole hole-left"></div>
+                    <div class="punch-hole hole-right"></div>
                 </div>
             </div>
         </section>
@@ -125,8 +201,12 @@
             <audio id="miCancion" controls>
                 <source src="evan.m4a" type="audio/mpeg">
             </audio>
-        </div>
+        </div>  
 
+        <footer class="section">
+            <h2 data-aos="fade-up">Gracias por todo. Eres lo mejor que me ha pasado.</h2>
+            <p class="signature">Con amor, Shou</p>
+        </footer>
     </main>
 
     <canvas id="heartCanvas"></canvas>
