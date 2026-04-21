@@ -28,6 +28,18 @@
             <button id="theme-toggle">🌓 Modo</button>
         </nav>
 
+        <section id="contador-tiempo" class="section">
+            <h2 data-aos="fade-up">Llevamos juntos...</h2>
+            <div class="timer-container" data-aos="zoom-in">
+                <div id="timer">
+                    <div class="time-block"><span id="days">00</span><p>Días</p></div>
+                    <div class="time-block"><span id="hours">00</span><p>Horas</p></div>
+                    <div class="time-block"><span id="minutes">00</span><p>Minutos</p></div>
+                    <div class="time-block"><span id="seconds">00</span><p>Segundos</p></div>
+                </div>
+            </div>
+        </section>
+
         <section id="historia" class="section">
             <h2 data-aos="fade-up">El comienzo de nuestra historia</h2>
             <div class="timeline">
@@ -53,16 +65,28 @@
                     <img src="motos.jpg" alt="Recuerdo 2">
                     <div class="hover-text">Nuestra primera cita</div>
                 </div>
-                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
                     <img src="amor.jpg" alt="Recuerdo 3">
                     <div class="hover-text">El primer "amor"</div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in">
+                    <img src="recuerdo4.jpg" alt="Recuerdo 4">
+                    <div class="hover-text">Un momento inolvidable</div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="recuerdo5.jpg" alt="Recuerdo 5">
+                    <div class="hover-text">Risas infinitas</div>
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="recuerdo6.jpg" alt="Recuerdo 6">
+                    <div class="hover-text">Siempre juntos</div>
                 </div>
             </div>
         </section>
 
         <section id="carta" class="section">
             <div class="letter-container" data-aos="fade-in">
-                <h2>Mi carta para ti</h2>
+                <h2>Una cartita</h2>
                 <p id="typing-text"></p>
             </div>
         </section>
@@ -73,28 +97,31 @@
                 <button class="reason-btn" onclick="showReason('Tu sonrisa ilumina mi peor día.')">Razón #1</button>
                 <button class="reason-btn" onclick="showReason('Tu forma de ver la vida me inspira.')">Razón #2</button>
                 <button class="reason-btn" onclick="showReason('Haces que cada momento sea especial.')">Razón #3</button>
+                <button class="reason-btn" onclick="showReason('Tu paciencia infinita conmigo.')">Razón #4</button>
+                <button class="reason-btn" onclick="showReason('Cómo me cuidas sin que te lo pida.')">Razón #5</button>
+                <button class="reason-btn" onclick="showReason('Eres mi mejor amigo y mi amor.')">Razón #6</button>
                 <p id="reason-display"></p>
             </div>
         </section>
 
-    <section id="sobre-seccion" class="section">
-    <h2 data-aos="fade-up">Un mensaje guardado</h2>
-    <div class="envelope-wrapper" onclick="openEnvelope()" data-aos="zoom-in">
-        <div class="envelope">
-            <div class="lid"></div>
-            <div class="paper">
-                <img src="pixelart.jpg" alt="Foto especial" class="paper-img">
-                <p class="paper-text">"Eres el 'sí' a todas mis dudas y el 'siempre' en mi vida. Te quiero infinito." ❤️</p>
+        <section id="sobre-seccion" class="section">
+            <h2 data-aos="fade-up">Un regalito</h2>
+            <div class="envelope-wrapper" onclick="openEnvelope()" data-aos="zoom-in">
+                <div class="lid"></div>
+                <div class="envelope">
+                    <div class="paper">
+                        <img src="pixelart.jpg" alt="Foto especial" class="paper-img">
+                        <p class="paper-text">"Él aquí luce como estrella<br>Él aquí, todo es claridad"</p>
+                    </div>
+                </div>
+                <div class="envelope-front"></div>
+                <div class="envelope-sticker">★</div>
             </div>
-        </div>
-        <div class="envelope-front"></div>
-        <div class="envelope-sticker">★</div>
-    </div>
-    <p class="envelope-hint">Toca el sobre para abrirlo ✨</p>
-</section>
+            <p class="envelope-hint">Toca el sobre para abrirlo jeje</p>
+        </section>
 
         <section id="sorpresa" class="section">
-            <button class="surprise-btn" id="btn-surprise">No pulses 😏</button>
+            <button class="surprise-btn" id="btn-surprise">No pulsar!! (hazlo)</button>
             <div id="surprise-msg" class="hidden-msg">
                 <div class="vale-coupon">
                     <div class="vale-header">
@@ -102,12 +129,12 @@
                         <span class="vale-number">№ 0001</span>
                     </div>
                     <div class="vale-body">
-                        <h3>¡Te debo un beso gigante y una cena! 🍕</h3>
-                        <p class="vale-description">Este vale es personal, intransferible y lleno de amor.</p>
+                        <h3>¡Te debo un beso enorme y una cena (casera)!</h3>
+                        <p class="vale-description">Este vale es personal e intransferible.</p>
                     </div>
                     <div class="vale-footer">
-                        <p>Válido para canjear hoy mismo.</p>
-                        <p class="vale-signature">Firma: Shou ❤️</p>
+                        <p>Válido para canjear cuando quieras.</p>
+                        <p class="vale-signature">Firma: Hinata Shoyo</p>
                     </div>
                     <div class="punch-hole hole-left"></div>
                     <div class="punch-hole hole-right"></div>
@@ -116,14 +143,13 @@
         </section>
 
         <div class="music-player">
-            <p>Nuestra canción 🎵</p>
             <audio id="miCancion" controls>
-                <source src="adoreyou.mp3" type="audio/mpeg">
+                <source src="evan.m4a" type="audio/mpeg">
             </audio>
         </div>
 
         <footer class="section">
-            <h2 data-aos="fade-up">Gracias por todo</h2>
+            <h2 data-aos="fade-up">Gracias por todo. Eres lo mejor que me ha pasado.</h2>
             <p class="signature">Con amor, Shou</p>
         </footer>
     </main>
